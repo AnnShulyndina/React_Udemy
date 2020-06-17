@@ -15,7 +15,4 @@ const templateHtml = `
 <li>${items[1]}</li>
 </ui>`
 console.log(templateHtml)
-//<ui>
-// <li>tea</li>
-// <li>coffee</li>
-// </ui>
+
