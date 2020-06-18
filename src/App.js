@@ -1,36 +1,21 @@
+//______Class properties_________
+class Counter {
+    count = 1;
 
-//______Classes______
-
-// function Animal(name, voice) {
-//     this.name = name;
-//     this.voice = voice;
-// }
-// Animal.prototype.say = function() {
-//     console.log(this.name, 'goes', this.voice);
-// };
-// const dog = new Animal('dog', 'woof');
-// const cat = new Animal('cat', 'meow');
-//
-// dog.say();
-// cat.say();
-
-class Animal {
-    constructor(name, voice) {
-        this.name = name;
-        this.voice= voice;
-   }
-   say() {
-        console.log(this.name, 'goes', this.voice);
-   }
-}
-class Bird extends Animal {
-constructor(name, voice, canFly) {
-    //конструктор ключегового класса
-    super(name, voice);
-    this.canFly = canFly;
+    inc = ()=> {
+        this.count++;
+        console.log(this.count);
     }
-    say() {
-    console.log('Birds dont like to talk')
-    }
+    // статическое свойство
+    static incStep = 2;
+    //статическая функция
+    static incrementAll = function (arr) {
+        arr.forEach((c)=> c.inc());
+    };
 }
-const duck = new Bird('Duck', 'quack');
+Counter.incrementAll([])
+
+const cnt = new Counter();
+console.log(cnt.count);
+cnt.inc();
+setTimeout(cnt.inc, 1000);
