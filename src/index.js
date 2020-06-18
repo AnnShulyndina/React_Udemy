@@ -1,6 +1,11 @@
-//import * as calc from ... - имортировать все
-// import {add as a, s, d} from "./App";
-// import Graph from "./App";
+import React from 'react';
+import ReactDom from 'react-dom';
 
-import Graph, * as calc from './App';
-console.log(add(2, 2));
+const el = <h1>Hello World</h1>
+//если писать на реакте
+// const el = React.createElement(
+//     'h1', null, 'Hello World!!');
+console.log(el);
+
+ReactDom.render(el,
+    document.getElementById('root'));
