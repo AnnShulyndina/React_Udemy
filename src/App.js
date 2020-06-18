@@ -1,21 +1,26 @@
-//______Class properties_________
-class Counter {
-    count = 1;
-
-    inc = ()=> {
-        this.count++;
-        console.log(this.count);
-    }
-    // статическое свойство
-    static incStep = 2;
-    //статическая функция
-    static incrementAll = function (arr) {
-        arr.forEach((c)=> c.inc());
-    };
+//______Модули JS_________
+//import_export
+function add(a, b) {
+return a+b;
 }
-Counter.incrementAll([])
+function subtract(a, b) {
+    return a-b;
+}
 
-const cnt = new Counter();
-console.log(cnt.count);
-cnt.inc();
-setTimeout(cnt.inc, 1000);
+function multiply(a, b) {
+return a*b;
+}
+function divide (a, b) {
+return a/b;
+}
+class Graph {
+    addNode() {
+        console.log('node added');
+    }
+}
+const PI = 3.1415;
+//для более короткого наименования можно сокращать 'as a' add as a
+export {add, subtract, divide};
+
+//можно создать один экспорт по умолчанию
+export default Graph
