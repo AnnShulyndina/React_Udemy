@@ -30,8 +30,6 @@ const App = () => {
             <SearchPanel/>
         </div>);
     }
-
-
 //превращает React элементы в обычные браузерные DOM элементы и рендерит их на странице
 ReactDom.render(<App/>,
     document.getElementById('root'));
