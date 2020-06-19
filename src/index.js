@@ -10,21 +10,46 @@ const AppHeader = () => {
 
 //вынести в отдельный компонент список дел
 const TodoList = () => {
+    //добавили  строчку const items и поменяли текст в <li> на наименование переменной
+    const items = ['Drink Coffee', 'Build Awesome App'];
     return (
         <ul>
-            <li>Learn React</li>
-            <li>Build Awesome App</li>
+            <li>{ items [0] }</li>
+            <li>{ items [1] }</li>
         </ul>
     );
 };
 
 const SearchPanel = () => {
-    return <input placeholder="search"/>;
+    const searchText = 'Type here to search';
+    const searchStyle = {
+        fontSize: '20px'
+    };
+    return <input
+        style={searchStyle}
+        placeholder = {searchText}
+        disabled={true}
+    // в реакте надо писать className а не class, htmlFor = for и обязательно camelCase
+    />;
 };
 
 const App = () => {
+
+    //реакт элемент
+    //логика для входа на сайт
+    // const isLoggedIn = false;
+    // const loginBox = <span>Log in please</span>
+    // const welcomeBox = <span>Welcome back</span>
+
     return (
         <div>
+            {/* отображение текущей даты и времени*/}
+            {/*<span>{ (new Date()).toString()}</span>*/}
+            {/*так можно добавить только реакт объект, доб через фигруные скобки т.к. это реакт элемент*/}
+            {/*логика для входа на сайт*/}
+            {/*{ isLoggedIn ? welcomeBox : loginBox }*/}
+
+
             <AppHeader/>
             <TodoList/>
             <SearchPanel/>
