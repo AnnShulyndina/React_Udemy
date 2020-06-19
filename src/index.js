@@ -8,9 +8,9 @@ import TodoList from "./components/todo-list";
 const App = () => {
     //в JSX можно вставлять массивы элементов (массив можно передать как свойство
     const todoData = [
-        {label:'Drink Coffee', important: false},
-        {label:'Make Awesome App', important: true},
-        {label:'Have a lunch', important: true},
+        {label:'Drink Coffee', important: false, id: 1},
+        {label:'Make Awesome App', important: true, id: 2},
+        {label:'Have a lunch', important: true, id: 3},
     ];
     return (
         <div>
